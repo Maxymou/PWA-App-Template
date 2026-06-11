@@ -99,10 +99,10 @@ sudo rsync -a ./ /opt/PWA-App-Template/
 cd /opt/PWA-App-Template
 sudo cp .env.example .env
 sudo nano .env
-sudo cp host-tools/pwa-test-lab-dev-host-api.service /etc/systemd/system/
+sudo cp host-tools/pwa-app-template-dev-host-api.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable --now pwa-test-lab-dev-host-api.service
-sudo systemctl status pwa-test-lab-dev-host-api.service
+sudo systemctl enable --now pwa-app-template-dev-host-api.service
+sudo systemctl status pwa-app-template-dev-host-api.service
 ```
 
 Vérification locale avec le token Host API:
