@@ -142,5 +142,5 @@ const router = async (req, res) => {
 };
 
 createServer(router).listen(port, () => {
-  console.log(`TESTapp2 Host API listening on ${port} for ${workdir}`);
+  console.log(`PWA App Template Host API listening on ${port} for ${workdir}`);
 });

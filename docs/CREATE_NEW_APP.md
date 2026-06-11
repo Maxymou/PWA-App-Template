@@ -1,10 +1,10 @@
-# Créer une nouvelle app depuis TESTapp2
+# Créer une nouvelle app depuis PWA App Template
 
-`TESTapp2` est un template GitHub pour démarrer rapidement une application PWA mobile-first avec auth, gestion utilisateurs, page DEV, Host API et mise à jour Docker Compose déjà câblées.
+`PWA App Template` est un template GitHub pour démarrer rapidement une application PWA mobile-first avec auth, gestion utilisateurs, page DEV, Host API et mise à jour Docker Compose déjà câblées.
 
 ## 1. Créer le dépôt
 
-1. Sur GitHub, ouvrez le dépôt `Maxymou/TESTapp2`.
+1. Sur GitHub, ouvrez le dépôt `Maxymou/PWA-App-Template`.
 2. Cliquez sur **Use this template**.
 3. Choisissez le nom du nouveau dépôt.
 4. Le nouveau dépôt est indépendant: il a son propre historique futur, ses issues, ses secrets, ses branches et ses déploiements.

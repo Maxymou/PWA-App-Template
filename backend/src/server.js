@@ -15,7 +15,7 @@ const customizationPath = process.env.APP_CUSTOMIZATION_PATH || path.join(runtim
 const uploadsPath = process.env.APP_UPLOADS_PATH || path.join(runtimePath, 'uploads');
 const sessionSecret = process.env.SESSION_SECRET || '';
 const sessionTtlMs = Number(process.env.SESSION_TTL_HOURS || 24) * 60 * 60 * 1000;
-const cookieName = process.env.SESSION_COOKIE_NAME || 'testapp2_session';
+const cookieName = process.env.SESSION_COOKIE_NAME || 'pwa_app_template_session';
 const loginFailures = new Map();
 const maxLoginFailures = 5;
 const lockoutMs = 5 * 60 * 1000;
@@ -24,10 +24,10 @@ app.use(express.json({ limit: '16kb' }));
 
 
 const defaultCustomization = Object.freeze({
-  appName: 'TESTapp2',
-  shortName: 'TESTapp2',
+  appName: 'PWA App Template',
+  shortName: 'PWA Template',
   description: 'Application PWA de base',
-  welcomeText: 'Bienvenue sur TESTapp2',
+  welcomeText: 'Bienvenue sur PWA App Template',
   organizationName: '',
   supportEmail: '',
   primaryColor: '#2563eb',
@@ -721,7 +721,7 @@ app.use((error, _req, res, _next) => {
 initUsers()
   .then(() => {
     app.listen(port, () => {
-      console.log(`TESTapp2 backend listening on ${port}`);
+      console.log(`PWA App Template backend listening on ${port}`);
       console.log(`[auth] Persistance utilisateurs: ${dataPath}`);
       console.log(`[customization] Configuration: ${customizationPath}`);
       console.log(`[customization] Uploads: ${uploadsPath}`);

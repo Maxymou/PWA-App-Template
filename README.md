@@ -1,6 +1,6 @@
-# TESTapp2
+# PWA App Template
 
-`TESTapp2` est un template d'application PWA mobile-first réutilisable comme **GitHub Template**. Il fournit un socle prêt à lancer avec React + Vite + PWA, Nginx, backend Express, authentification, gestion utilisateurs, page DEV, Host API locale et mise à jour Docker Compose.
+`PWA App Template` est un template d'application PWA mobile-first réutilisable comme **GitHub Template**. Il fournit un socle prêt à lancer avec React + Vite + PWA, Nginx, backend Express, authentification, gestion utilisateurs, page DEV, Host API locale et mise à jour Docker Compose.
 
 Le dépôt est conçu pour créer de nouvelles apps sans réécrire le socle technique:
 
@@ -14,7 +14,7 @@ Consultez aussi [`docs/CREATE_NEW_APP.md`](docs/CREATE_NEW_APP.md) pour un guide
 ## Architecture
 
 ```txt
-TESTapp2/
+PWA-App-Template/
 ├── docker-compose.yml
 ├── .env.example
 ├── frontend/        # React + Vite + PWA, servi par Nginx
@@ -38,11 +38,11 @@ L'identité visible de l'app se trouve dans `frontend/app.config.js` et est rée
 
 ```js
 export const appConfig = {
-  appId: 'testapp2',
-  appName: 'TESTapp2',
-  appTitle: 'TESTapp2',
+  appId: 'pwa-app-template',
+  appName: 'PWA App Template',
+  appTitle: 'PWA App Template',
   appDescription: 'Template PWA mobile-first pour créer rapidement de nouvelles applications.',
-  shortName: 'TESTapp2',
+  shortName: 'PWA Template',
   themeColor: '#020617',
   backgroundColor: '#020617',
   accentColor: '#A3E635',
@@ -94,9 +94,9 @@ L'application est servie par défaut sur `http://localhost:3000`. Au premier dé
 La Host API doit tourner dans le LXC/hôte qui contient Docker afin de pouvoir exécuter les commandes Docker Compose whitelistées.
 
 ```bash
-sudo mkdir -p /opt/TESTapp2
-sudo rsync -a ./ /opt/TESTapp2/
-cd /opt/TESTapp2
+sudo mkdir -p /opt/PWA-App-Template
+sudo rsync -a ./ /opt/PWA-App-Template/
+cd /opt/PWA-App-Template
 sudo cp .env.example .env
 sudo nano .env
 sudo cp host-tools/pwa-test-lab-dev-host-api.service /etc/systemd/system/

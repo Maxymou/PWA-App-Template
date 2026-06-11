@@ -5,7 +5,7 @@ export const defaultCustomization = {
   appName: appConfig.appName,
   shortName: appConfig.shortName,
   description: appConfig.appDescription,
-  welcomeText: 'Bienvenue sur TESTapp2',
+  welcomeText: 'Bienvenue sur PWA App Template',
   organizationName: '',
   supportEmail: '',
   primaryColor: appConfig.accentColor,
