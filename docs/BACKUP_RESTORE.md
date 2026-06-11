@@ -1,6 +1,6 @@
 # Sauvegarde et restauration des données utilisateurs
 
-Ce guide explique comment sauvegarder et restaurer les données utilisateurs persistantes du template `TESTapp2`.
+Ce guide explique comment sauvegarder et restaurer les données utilisateurs persistantes du template `PWA App Template`.
 
 ## Données concernées
 
@@ -98,32 +98,32 @@ docker compose up -d
 curl http://localhost:3000/health
 ```
 
-## Méthode alternative pour une installation dans `/opt/TESTapp2`
+## Méthode alternative pour une installation dans `/opt/PWA-App-Template`
 
-Si l'application est installée dans `/opt/TESTapp2`, placez-vous dans ce dossier pour utiliser le bon projet Compose et les bons fichiers `.env` :
+Si l'application est installée dans `/opt/PWA-App-Template`, placez-vous dans ce dossier pour utiliser le bon projet Compose et les bons fichiers `.env` :
 
 ```bash
-cd /opt/TESTapp2
+cd /opt/PWA-App-Template
 mkdir -p backups
 
 docker compose down
 
 docker run --rm \
   -v $(docker volume ls --format '{{.Name}}' | grep user-data | head -n 1):/data:ro \
-  -v /opt/TESTapp2/backups:/backup \
+  -v /opt/PWA-App-Template/backups:/backup \
   alpine sh -c 'cd /data && tar czf /backup/user-data-$(date +%Y%m%d-%H%M%S).tar.gz .'
 ```
 
 Pour restaurer :
 
 ```bash
-cd /opt/TESTapp2
+cd /opt/PWA-App-Template
 
 docker compose down
 
 docker run --rm \
   -v $(docker volume ls --format '{{.Name}}' | grep user-data | head -n 1):/data \
-  -v /opt/TESTapp2/backups:/backup \
+  -v /opt/PWA-App-Template/backups:/backup \
   alpine sh -c 'rm -rf /data/* && tar xzf /backup/<archive-user-data>.tar.gz -C /data'
 
 docker compose up -d

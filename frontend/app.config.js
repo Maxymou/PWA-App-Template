@@ -1,9 +1,9 @@
 export const appConfig = {
-  appId: 'testapp2',
-  appName: 'TESTapp2',
-  appTitle: 'TESTapp2',
+  appId: 'pwa-app-template',
+  appName: 'PWA App Template',
+  appTitle: 'PWA App Template',
   appDescription: 'Template PWA mobile-first pour créer rapidement de nouvelles applications.',
-  shortName: 'TESTapp2',
+  shortName: 'PWA Template',
   themeColor: '#020617',
   backgroundColor: '#020617',
   accentColor: '#A3E635',
